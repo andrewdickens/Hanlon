@@ -107,7 +107,7 @@ module Hanlon
             broker.name             = name
             broker.user_description = description
             broker.is_template      = false
-            req_metadata_hash.each { |key, md_hash_value|
+            broker.req_metadata_hash.each { |key, md_hash_value|
               value = params[key]
               broker.set_metadata_value(key, value, md_hash_value[:validation])
             }
